@@ -21,7 +21,7 @@ export function createGallery(images) {
         downloads,
       }) => `
       <li class="gallery-item">
-      <div class='gallery-img>
+      <div class='gallery-img'>
           <a href="${largeImageURL}">
             <img src="${webformatURL}" alt="${tags}" loading="lazy" />
           </a>
