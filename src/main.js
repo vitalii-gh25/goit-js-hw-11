@@ -16,7 +16,7 @@ searchForm.addEventListener('submit', e => {
 
   const query = searchInput.value.trim();
   if (!query) {
-    iziToast.error({ title: 'Ошибка', message: 'Введите поисковый запрос' });
+    iziToast.error({ title: 'Error', message: 'Enter your search query' });
     return;
   }
 
@@ -29,7 +29,7 @@ searchForm.addEventListener('submit', e => {
 
       if (!data.hits.length) {
         iziToast.warning({
-          title: 'Внимание',
+          title: 'Attention',
           message:
             'Sorry, there are no images matching your search query. Please try again!',
         });
@@ -38,16 +38,16 @@ searchForm.addEventListener('submit', e => {
 
       createGallery(data.hits);
       iziToast.success({
-        title: 'Успех',
-        message: `Найдено ${data.hits.length} изображений`,
+        title: 'Success',
+        message: `Found ${data.hits.length} images`,
       });
     })
     .catch(error => {
       hideLoader();
       console.error(error);
       iziToast.error({
-        title: 'Ошибка',
-        message: 'Не удалось загрузить данные',
+        title: 'Error',
+        message: 'Failed to load data',
       });
     });
 });
