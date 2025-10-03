@@ -2,13 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  margin: 32px 156px 36px;
+  margin: 32px auto;
 }
 
 .gallery li {
   display: flex;
   flex-wrap: wrap;
-  max-width: calc((1128px - 48px) / 3);
+  flex: 0 0 calc((1128px - 48px) / 3);
 
   border: 1px solid #808080;
   width: 360px;
