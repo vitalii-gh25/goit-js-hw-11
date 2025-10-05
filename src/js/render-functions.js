@@ -42,10 +42,8 @@ export function createGallery(images) {
   lightbox.refresh();
 
   // ✨ Якщо потрібно показати лише 9 зображень — логічніше зробити це тут
-  const galleryItems = galleryContainer.querySelectorAll('.gallery-item');
-  galleryItems.forEach((item, index) => {
-    if (index >= 9) item.style.display = 'none';
-  });
+  galleryContainer.insertAdjacentHTML('beforeend', markup);
+  lightbox.refresh();
 }
 
 export function clearGallery() {
