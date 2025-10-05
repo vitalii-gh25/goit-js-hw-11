@@ -15,6 +15,7 @@ searchForm.addEventListener('submit', e => {
   e.preventDefault();
 
   const query = searchInput.value.trim();
+
   if (!query) {
     iziToast.error({ title: 'Error', message: 'Enter your search query' });
     return;
@@ -37,6 +38,7 @@ searchForm.addEventListener('submit', e => {
       }
 
       createGallery(data.hits);
+
       iziToast.success({
         title: 'Success',
         message: `Found ${data.hits.length} images`,
